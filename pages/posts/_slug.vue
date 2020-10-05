@@ -1,12 +1,9 @@
-<template lang="pug">
-  div
-    h1
-      |{{ doc.title }}
-    div
-      |{{ doc.description }}
-    nuxt-content(
-      :document="doc"
-      )
+<template>
+  <div>
+    <h1>{{ doc.title }}</h1>
+    <div>{{ doc.description }}</div>
+    <nuxt-content document="doc" />
+  </div>
 </template>
 
 <script>
