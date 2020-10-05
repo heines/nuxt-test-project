@@ -1,4 +1,12 @@
 import colors from 'vuetify/es5/util/colors';
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/nuxt-test-project/'
+        }
+      }
+    : {}
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -82,4 +90,5 @@ export default {
   generate: {
     dir: 'docs'
   },
+  ...routerBase
 };
